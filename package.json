@@ -1,0 +1,42 @@
+{
+    "name": "tests",
+    "version": "1.0.0",
+    "description": "learning tests",
+    "author": "Denis",
+    "license": "ISC",
+    "private": true,
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/dsergienko/Testing.git"
+    },
+    "homepage": "https://github.com/dsergienko/Testing",
+    "devDependencies": {
+        "@babel/cli": "^7.7.0",
+        "@babel/core": "^7.7.2",
+        "@babel/node": "^7.7.0",
+        "@babel/plugin-transform-runtime": "^7.6.2",
+        "@babel/preset-env": "^7.7.1",
+        "@babel/register": "^7.7.0",
+        "@babel/runtime": "^7.7.2",
+        "@types/selenium-webdriver": "^4.0.5",
+        "dotenv": "^8.2.0",
+        "dotenv-expand": "^5.1.0",
+        "husky": "^3.0.9",
+        "lint-staged": "^9.4.2",
+        "prettier": "1.19.1",
+        "regenerator-runtime": "^0.13.3"
+    },
+    "dependencies": {
+        "@elastic/elasticsearch": "^7.4.0",
+        "chai": "^4.2.0",
+        "mocha": "^6.2.2",
+        "mocha-parallel-tests": "^2.2.2",
+        "selenium-webdriver": "^4.0.0-alpha.5"
+    },
+    "scripts": {
+        "test": "./node_modules/.bin/mocha --require @babel/register tests/*_test.js --timeout 1000*60*2"
+    },
+    "engines": {
+        "node": ">=12.13.0"
+    }
+}
